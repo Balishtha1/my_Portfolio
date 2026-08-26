@@ -1,4 +1,4 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdArrowOutward, MdCopyright, MdEmail, MdPhone } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -6,32 +6,47 @@ const Contact = () => {
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
         <h3>Contact</h3>
+
         <div className="contact-flex">
+          {/* Contact Information */}
           <div className="contact-box">
-            <h4>Connect</h4>
-            <p>
-              <a
-                href="https://www.linkedin.com/in/akashrmalhotra/"
-                target="_blank"
-                rel="noreferrer"
-                data-cursor="disable"
-              >
-                LinkedIn — akashrmalhotra
-              </a>
-            </p>
+            <h4>Get in touch</h4>
+
+            <a
+              href="mailto:manassoni014@gmail.com"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              <MdEmail />
+              manassoni014@gmail.com
+            </a>
+
+            <a
+              href="tel:+919098847273"
+              data-cursor="disable"
+              className="contact-social"
+            >
+              <MdPhone />
+              +91 9098847273
+            </a>
+
             <h4>Education</h4>
+
             <p>
-              PGPWE (MBA), Indian Institute of Management, Lucknow — 2021–2023
+              MCA, National Institute of Technology Raipur
             </p>
+
             <p>
-              B.Tech Computer Science, Manav Rachna Educational Institutions —
-              2009–2013
+              Software Engineering · AI/ML · Full-Stack Development
             </p>
           </div>
+
+          {/* Social Links */}
           <div className="contact-box">
             <h4>Social</h4>
+
             <a
-              href="https://github.com/akashrmalhotra"
+              href="https://github.com/Balishtha1"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -39,8 +54,9 @@ const Contact = () => {
             >
               GitHub <MdArrowOutward />
             </a>
+
             <a
-              href="https://www.linkedin.com/in/akashrmalhotra/"
+              href="https://www.linkedin.com/in/manas-soni-376817319/"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -48,31 +64,17 @@ const Contact = () => {
             >
               LinkedIn <MdArrowOutward />
             </a>
-            <a
-              href="https://www.youtube.com/@Leftbraincoder"
-              target="_blank"
-              rel="noreferrer"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              YouTube <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/leftbraincoder/"
-              target="_blank"
-              rel="noreferrer"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
-            </a>
           </div>
+
+          {/* Footer */}
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Akash Malhotra</span>
+              Let's build something <br />
+              <span>meaningful.</span>
             </h2>
+
             <h5>
-              <MdCopyright /> 2026
+              <MdCopyright /> 2026 Manas Soni
             </h5>
           </div>
         </div>

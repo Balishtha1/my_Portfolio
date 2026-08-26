@@ -5,32 +5,32 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "CallHQ",
-    category: "Voice AI Calling Platform",
-    tools: "Voice AI, Calling Automation, CRM Integrations",
-    image: "/images/callhq.png",
-    link: "https://callhq.ai",
+    title: "YOUR PROJECT 1",
+    category: "AI / ML APPLICATION",
+    tools: "Python, Machine Learning, React",
+    image: "/images/project1.png",
+    link: "YOUR_GITHUB_URL",
   },
   {
-    title: "Whatsapp Automation",
-    category: "WABA Application",
-    tools: "WhatsApp Business API, Workflow Automation, Notifications",
-    image: "/images/whatsapp.png",
-    link: "https://whatsapp.callhq.ai",
+    title: "YOUR PROJECT 2",
+    category: "FULL-STACK APPLICATION",
+    tools: "React, Node.js, Express, MongoDB",
+    image: "/images/project2.png",
+    link: "YOUR_GITHUB_URL",
   },
   {
-    title: "Broki",
-    category: "Real Estate Platform for FnB Industry",
-    tools: "Property Discovery, Lead Management, Marketplace Workflows",
-    image: "/images/broki.png",
-    link: "https://broki.in",
+    title: "YOUR PROJECT 3",
+    category: "DATA-DRIVEN SYSTEM",
+    tools: "Python, SQL, Pandas, Machine Learning",
+    image: "/images/project3.png",
+    link: "YOUR_GITHUB_URL",
   },
   {
-    title: "Orrdr.com",
-    category: "Ecommerce Platform and Mobile App",
-    tools: "Ecommerce, Mobile Experience, Order Management",
-    image: "/images/orrdr.png",
-    link: "https://orrdr.com",
+    title: "YOUR PROJECT 4",
+    category: "SOFTWARE ENGINEERING",
+    tools: "Java / C++ / React / Backend",
+    image: "/images/project4.png",
+    link: "YOUR_GITHUB_URL",
   },
 ];
 
@@ -41,8 +41,10 @@ const Work = () => {
   const goToSlide = useCallback(
     (index: number) => {
       if (isAnimating) return;
+
       setIsAnimating(true);
       setCurrentIndex(index);
+
       setTimeout(() => setIsAnimating(false), 500);
     },
     [isAnimating]
@@ -51,12 +53,14 @@ const Work = () => {
   const goToPrev = useCallback(() => {
     const newIndex =
       currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
+
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
     const newIndex =
       currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
+
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
@@ -77,6 +81,7 @@ const Work = () => {
           >
             <MdArrowBack />
           </button>
+
           <button
             className="carousel-arrow carousel-arrow-right"
             onClick={goToNext}
@@ -101,17 +106,24 @@ const Work = () => {
                       <div className="carousel-number">
                         <h3>0{index + 1}</h3>
                       </div>
+
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
+
                         <p className="carousel-category">
                           {project.category}
                         </p>
+
                         <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
+                          <span className="tools-label">
+                            Tools & Features
+                          </span>
+
                           <p>{project.tools}</p>
                         </div>
                       </div>
                     </div>
+
                     <div className="carousel-image-wrapper">
                       <WorkImage
                         image={project.image}
@@ -130,8 +142,9 @@ const Work = () => {
             {projects.map((_, index) => (
               <button
                 key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
+                className={`carousel-dot ${
+                  index === currentIndex ? "carousel-dot-active" : ""
+                }`}
                 onClick={() => goToSlide(index)}
                 aria-label={`Go to project ${index + 1}`}
                 data-cursor="disable"
